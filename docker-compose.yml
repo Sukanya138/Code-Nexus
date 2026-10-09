@@ -1,0 +1,25 @@
+# Local development Docker Compose
+# For production, use Neon (https://neon.tech) instead
+# Backend deployed to Render uses DB_URL environment variable pointing to Neon
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: codenexus-postgres
+    environment:
+      POSTGRES_DB: codenexus
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - codenexus_pg_data:/var/lib/postgresql/data
+      - ./docker/postgres/init-extensions.sql:/docker-entrypoint-initdb.d/01-extensions.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d codenexus"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  codenexus_pg_data:

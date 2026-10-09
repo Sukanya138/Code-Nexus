@@ -1,0 +1,38 @@
+# Environment variables (local dev + secrets)
+.env
+.env.local
+.env.*.local
+
+# Backend
+target/
+*.jar
+*.war
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.gradle/
+
+# Frontend
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project

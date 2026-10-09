@@ -1,0 +1,13 @@
+target/
+.git/
+.gitignore
+.env
+.env.local
+.env.*.local
+README.md
+DEPLOYMENT.md
+DEPLOYMENT_CHECKLIST.md
+.idea/
+*.iml
+.vscode/
+.DS_Store
