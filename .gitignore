@@ -7,7 +7,7 @@
 target/
 *.jar
 *.war
-.classpath
+*.classpath
 .project
 .settings/
 .idea/
