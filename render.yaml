@@ -23,9 +23,9 @@ services:
       - key: GITHUB_CLIENT_SECRET
         sync: false
       - key: FRONTEND_URL
-        sync: false
+        value: "https://code-nexus-teal.vercel.app"
       - key: CORS_ALLOWED_ORIGINS
-        sync: false
+        value: "https://code-nexus-teal.vercel.app"
       - key: TOKEN_ENCRYPTOR_PASSWORD
         sync: false
       - key: TOKEN_ENCRYPTOR_SALT
